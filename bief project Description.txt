@@ -1,0 +1,3 @@
+Revolutionized 3D printing workflow by building three python programs. 
+Generate a new sheet of 3D prints to be printed each week organized by color to increase efficiency 2. A program to automatically email multiple patrons at once informing them their 3D print has been completed and is ready for pick up 3. Generates a list of expired prints that have not been picked up three weeks after the initial contact. Programs are easily accessible to use by guiding the staff member through prompts that explains what is happening with the code in the background.  
+Utilized OS library in python to automatically move files based on the name to their respective folders whether that’s for game clips or to organize all my graphs based on game in my ‘Computer-Experiments’ project.  
