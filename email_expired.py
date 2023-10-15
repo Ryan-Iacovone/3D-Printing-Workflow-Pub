@@ -3,7 +3,11 @@ import os as os
 import datetime as dt
 import time
 
-excel_file_master = r"~\Desktop\EGR KDL Master 3D Printing List.xlsx"
+#Code to read file from data folder in working directory 
+#excel_file_master = r"Data\Example data.xlsx"
+
+#Code to read file from desktop
+excel_file_master = r"~\Desktop\Example data.xlsx"
 
 df = pd.read_excel(excel_file_master)
 
@@ -137,11 +141,12 @@ import smtplib #library that actually sends the email
 import time  #used to get time.sleep function pause the program as to not send emails too fast and get blocked by gmail
 
  
-#List of emails for EGR KDL 3D print team 
-KDL_emails = ["cdelongchamp@kdl.org", "HGoulet@kdl.org", "AVuong@kdl.org", "RIacovone@kdl.org", "PLu@kdl.org", "JSavage-Dura@kdl.org",  "trhoades@kdl.org", "hmathews@kdl.org"]
+#List of emails for you'd like to send expired print list to 
+email_list = ["jack@email.com", "Max@email.com", "bobby@email.com"]
 
-email_sender = "egr3dprinting@gmail.com"
-email_pass = "vpbpggszhbhnklkz"
+#Email credentials 
+email_sender = "myemail@email.com"
+email_pass = "XXXXXXXXXXXXXX"
 
 subject = f"Expired Prints List for Week of {today}"
 
@@ -154,7 +159,7 @@ file_paths = [file_path_upadte, file_path_print]
 #matching up the parameters above for our email to the format python expects them 
 em = EmailMessage()
 em['From'] = email_sender
-em['To'] = KDL_emails
+em['To'] = email_list
 em['Subject'] = subject
 em.set_content(body)
 
@@ -172,6 +177,6 @@ context = ssl.create_default_context()
 # Sending an email to all KDL 3D print staff all at once
 with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
     smtp.login(email_sender, email_pass)
-    smtp.sendmail(email_sender, KDL_emails, em.as_string())
+    smtp.sendmail(email_sender, email_list, em.as_string())
 
-print(f"\n\'{file_name}\' and {file_print} has been successfully emailed to EGR KDL 3D printing team!")
+print(f"\n\'{file_name}\' and {file_print} has been successfully emailed to the 3D printing team!")

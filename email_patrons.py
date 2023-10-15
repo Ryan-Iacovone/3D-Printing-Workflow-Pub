@@ -1,7 +1,10 @@
 import pandas as pd 
 
-#Importing in master 3D printing data set from onedrive to get updated form data 
-excel_file_master = r"~\Desktop\EGR KDL Master 3D Printing List.xlsx"
+#Code to read file from data folder in working directory 
+#excel_file_master = r"Data\Example data.xlsx"
+
+#Code to read file from desktop
+excel_file_master = r"~\Desktop\Example data.xlsx"
 
 df = pd.read_excel(excel_file_master)
 
@@ -90,8 +93,10 @@ import ssl # Adds security to our email
 import smtplib # Library that actually sends the email 
 import time  #used to get time.sleep function pause the program as to not send emails too fast and get blocked by gmail
 
-email_sender = "egr3dprinting@gmail.com"
-email_pass = "vpbpggszhbhnklkz"
+
+#Inputting your email credentials
+email_sender = "myemail@email.com"
+email_pass = "XXXXXXXXXXXXX"
 email_receivers = valid_emails.copy()
 
 # Extract the print variables into separate lists
@@ -106,8 +111,8 @@ context = ssl.create_default_context()
 for i in range(len(email_receivers)):
     #What we want our message in the email to say 
     body = "Hello," + "\n\n" + f"Your {prints[i]} print has been completed and is ready for pickup!" + \
-    "\n\n" + f" Please pick up your {prints[i]} print within 2 weeks at the lower level desk of the EGR KDL during open hours." + \
-    "\n\n" + "From the EGR KDL 3D Printing Team"
+    "\n\n" + f" Please pick up your {prints[i]} print within 2 weeks at the lower level desk of the library during open hours." + \
+    "\n\n" + "From the library 3D Printing Team"
     
     # Matching up the parameters above for our email to the format python expects them 
     em = EmailMessage()
