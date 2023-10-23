@@ -1,5 +1,5 @@
 # Workflow for Recieving, Handling, and Contacting Patron's 3D Print Requests 
- 
+ ups
 ## Overview 
 
 The 3D printing program used to rely solely on pen and paper for taking in and processing 3D print requests. Once a print request was completed, staff would have to manually contact the patron by phone or email (whichever one was more legible). This was an arduous process that ate up too many staff hours that could/should have been devoted to tasks actually in the job description of a librarian. Paper slips that were used to take in requests would commonly get lost leading to awkward interactions when a patron came to check on their print request, but staff could not find any evidence of it. A typical problem of using pen and paper was that staff had no way to control the types of prints patrons would request. This led to many patron requests that surpassed the specifications of our 3D printers, exceeded the maximum print time, or simply was unable to be found on any open-source repository. In addition, staff had no way to compile useful information on how well the program was performing. Whether that was knowing the most popular print requests or colors or the turnaround time from receiving a 3D print request to contacting the patron that it was finished.
