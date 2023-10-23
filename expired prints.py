@@ -174,7 +174,7 @@ for file_path in file_paths:
 #adding a layer of security to our email 
 context = ssl.create_default_context()
 
-# Sending an email to all KDL 3D print staff all at once
+# Sending an email to all 3D print staff all at once
 with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
     smtp.login(email_sender, email_pass)
     smtp.sendmail(email_sender, email_list, em.as_string())

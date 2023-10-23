@@ -192,7 +192,7 @@ em['Subject'] = subject
 em.set_content(body)
 em.add_attachment(file_data, maintype="application", subtype="vnd.openxmlformats-officedocument.spreadsheetml.sheet", filename= file_name)
 
-# Sending an email to all KDL 3D print staff all at once
+# Sending an email to all 3D print staff all at once
 with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
     smtp.login(email_sender, email_pass)
     smtp.sendmail(email_sender, email_list, em.as_string())
